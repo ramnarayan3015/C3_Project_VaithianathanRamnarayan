@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -6,12 +7,12 @@ import java.time.LocalTime;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RestaurantTest {
-    Restaurant restaurant;
-    LocalTime openingTime;
-    LocalTime closingTime;
+    static Restaurant restaurant;
+    static LocalTime openingTime;
+    static LocalTime closingTime;
 
-    @BeforeEach
-    public void beforeEach(){
+    @BeforeAll
+    public static void beforeAll(){
         openingTime = LocalTime.parse("10:30:00");
         closingTime = LocalTime.parse("22:00:00");
         restaurant = new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
