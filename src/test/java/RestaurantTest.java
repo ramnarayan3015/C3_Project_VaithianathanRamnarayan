@@ -60,9 +60,8 @@ class RestaurantTest {
     }
     @Test
     public void calculating_order_value_from_items_added_to_the_cart(){
-        ArrayList<String> itemsSelected = new ArrayList<>();
-        itemsSelected.add("Sizzling brownie");
-        assertEquals(500,restaurant.getTotalOrderAmount(itemsSelected));
+        String[] itemsSelected = {"Sweet corn soup"};
+        assertEquals(119,restaurant.getTotalOrderAmount(itemsSelected));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }

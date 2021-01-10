@@ -63,7 +63,13 @@ public class Restaurant {
         return name;
     }
 
-    public int getTotalOrderAmount(ArrayList<String> itemsSelected) {
+    public int getTotalOrderAmount(String[] itemsSelected) {
+        int total = 0;
+        for(int i=0;i<itemsSelected.length;i++) {
+            Item item = findItemByName(itemsSelected[i]);
+            total = total + item.getPrice();
+            return total;
+        }
         return -1;
     }
 }
