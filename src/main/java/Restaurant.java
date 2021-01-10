@@ -48,20 +48,22 @@ public class Restaurant {
         Item itemToBeRemoved = findItemByName(itemName);
         if (itemToBeRemoved == null)
             throw new ItemNotFoundException(itemName);
-
         menu.remove(itemToBeRemoved);
     }
+
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
                 +"Location:"+ location + "\n"
                 +"Opening time:"+ openingTime +"\n"
                 +"Closing time:"+ closingTime +"\n"
                 +"Menu:"+"\n"+getMenu());
-
     }
 
     public String getName() {
         return name;
     }
 
+    public int getTotalOrderAmount(ArrayList<String> itemsSelected) {
+        return -1;
+    }
 }
