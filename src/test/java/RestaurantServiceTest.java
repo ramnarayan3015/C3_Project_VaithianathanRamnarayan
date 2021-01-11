@@ -13,15 +13,11 @@ class RestaurantServiceTest {
 
     @BeforeAll
     public static void beforeAll(){
+        openingTime = LocalTime.parse("10:30:00");
+        closingTime = LocalTime.parse("22:00:00");
         restaurant = service.addRestaurant("Amelie's cafe","Chennai",openingTime,closingTime);
         restaurant.addToMenu("Sweet corn soup",119);
         restaurant.addToMenu("Vegetable lasagne", 269);
-    }
-
-    @BeforeEach
-    public void beforeEach(){
-        openingTime = LocalTime.parse("10:30:00");
-        closingTime = LocalTime.parse("22:00:00");
     }
 
     //>>>>>>>>>>>>>>>>>>>>>>SEARCHING<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
